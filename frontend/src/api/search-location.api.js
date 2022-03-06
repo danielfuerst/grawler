@@ -15,9 +15,9 @@ export const searchLocationApi = () => {
         }
 
         fetch(LOCATION_API_URL)
-            .then(response => response.json())
-            .then(jsonResponse => {
-                console.log(jsonResponse)
+            .then((response) => response.json())
+            .then((jsonResponse) => {
+                console.log(jsonResponse);
                 state.locations = jsonResponse.results;
                 state.loading = false;
             });

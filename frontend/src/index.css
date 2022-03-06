@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-::-webkit-search-cancel-button{
-    cursor:pointer;
+::-webkit-search-cancel-button {
+    cursor: pointer;
 }

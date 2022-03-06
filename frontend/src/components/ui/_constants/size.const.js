@@ -4,7 +4,6 @@ const SIZES = {
     MEDIUM: 'medium',
     LARGE: 'large',
     XLARGE: 'xlarge',
-}
+};
 
-export {SIZES};
-
+export { SIZES };

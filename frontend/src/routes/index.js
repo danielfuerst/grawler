@@ -15,13 +15,16 @@ const allNavLinks = [
     },
 ];
 
-const routes = allNavLinks.map(function ({name, path, component}) { return {name, path, component}});
-const navItems = allNavLinks.map(function ({name, title}) { return {name, title}});
+const routes = allNavLinks.map(function ({ name, path, component }) {
+    return { name, path, component };
+});
+const navItems = allNavLinks.map(function ({ name, title }) {
+    return { name, title };
+});
 
-function getNavTitleByRouteName (name) {
+function getNavTitleByRouteName(name) {
     const item = allNavLinks.filter((n) => n.name === name)[0];
     return item ? item.headline : null;
 }
 
-
-export {routes, navItems, getNavTitleByRouteName};
+export { routes, navItems, getNavTitleByRouteName };
