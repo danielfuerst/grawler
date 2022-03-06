@@ -52,6 +52,7 @@ function search() {
         return;
     }
 
+    console.log('search dfdfa');
     emit('search');
 }
 </script>
@@ -77,6 +78,6 @@ function search() {
             class="mx-auto mt-2.5 mb-3 w-full py-2.5 text-center md:mx-0 md:w-auto md:text-left"
             size="large"
             label="Search connection"
-            @click="search" />
+            @clicked="search" />
     </div>
 </template>
