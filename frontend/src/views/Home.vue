@@ -1,10 +1,10 @@
 <script setup>
 import { computed } from 'vue';
 
-import SearchConnection from '../components/connection/SearchConnection.vue';
-import Map from '../components/geo/Map.vue';
+import SearchConnection from '@/components/connection/SearchConnection.vue';
+import Map from '@/components/geo/Map.vue';
 
-import { searchLocationApi } from '../api/search-location.api.js';
+import { searchLocationApi } from '@/api/search-location.api.js';
 
 const stateFrom = searchLocationApi();
 const stateTo = searchLocationApi();

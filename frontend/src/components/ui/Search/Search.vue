@@ -4,7 +4,7 @@ import { SearchCircleIcon } from '@heroicons/vue/outline';
 import {
     focusNextSibling,
     focusPreviousSibling,
-} from '../../../composition/utilities.js';
+} from '@/composables/utilities.js';
 
 const isSelectedLocal = ref(false);
 

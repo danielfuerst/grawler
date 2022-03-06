@@ -2,7 +2,7 @@
 import AppNavigation from './AppNavigation.vue';
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
-import { getNavTitleByRouteName } from './../../routes/index.js';
+import { getNavTitleByRouteName } from '@/routes/index.js';
 
 const currentRouteName = computed(() => {
     return useRoute().name;

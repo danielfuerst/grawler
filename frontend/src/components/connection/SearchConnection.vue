@@ -2,8 +2,8 @@
 import { ref, watch } from 'vue';
 import debounce from 'lodash.debounce';
 
-import Search from '../ui/Search/Search.vue';
-import Button from '../ui/Button/Button.vue';
+import Search from '@/components/ui/Search/Search.vue';
+import Button from '@/components/ui/Button/Button.vue';
 import { ArrowNarrowRightIcon } from '@heroicons/vue/solid';
 
 const searchQueryFrom = ref('');
