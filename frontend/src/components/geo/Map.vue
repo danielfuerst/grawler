@@ -8,6 +8,16 @@
     const zoom = ref(9)
     const rotation = ref(0)
     const selected = ref('https://wmts100.geo.admin.ch/1.0.0/ch.swisstopo.pixelkarte-farbe/default/current/3857/{z}/{x}/{y}.jpeg')
+
+    const drawstart = (event) => {
+        console.log(event)
+
+    }
+
+    const drawend = (event) => {
+        console.log(event)
+    }
+
 </script>
 
 <template>
@@ -15,12 +25,32 @@
         <ol-map
                 :loadTilesWhileAnimating="true" :loadTilesWhileInteracting="true" style="height:700px" class="overflow-hidden" >
 
-            <ol-view ref="view" :center="center" :rotation="rotation" :zoom="zoom" :projection="projection"/>
+            <ol-view ref="view" :center="center" :rotation="rotation" :zoom="zoom" :maxZoom="19" :minZoom="9" :projection="projection"/>
 
             <ol-tile-layer>
                 <ol-source-xyz :url="selected"/>
             </ol-tile-layer>
 
+            <ol-vector-layer>
+                <ol-source-vector :projection="projection">
+
+                    <ol-interaction-draw type="Point" @drawend="drawend" @drawstart="drawstart">
+
+                    </ol-interaction-draw>
+
+                </ol-source-vector>
+
+                <ol-style>
+                    <ol-style-stroke color="red" :width="2"></ol-style-stroke>
+                    <ol-style-fill color="rgba(255,255,255,0.1)"></ol-style-fill>
+                    <ol-style-circle :radius="4">
+                        <ol-style-fill color="blue"></ol-style-fill>
+                    </ol-style-circle>
+                </ol-style>
+            </ol-vector-layer>
+            <ol-zoom-control />
+            <ol-fullscreen-control />
+            <ol-scaleline-control />
         </ol-map>
     </div>
 </template>
