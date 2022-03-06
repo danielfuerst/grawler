@@ -1,5 +1,5 @@
 <script setup>
-import { ref, defineProps, defineEmits, computed } from 'vue';
+import { ref, computed } from 'vue';
 import { SearchCircleIcon } from '@heroicons/vue/outline';
 import {
     focusNextSibling,
@@ -20,7 +20,7 @@ const props = defineProps({
     autoCompleteSuggestions: {
         type: Array,
         default() {
-            return []
+            return [];
         },
     },
 });

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, defineProps, watch, defineEmits } from 'vue';
+import { ref, watch } from 'vue';
 import debounce from 'lodash.debounce';
 
 import Search from '../ui/Search/Search.vue';
@@ -13,15 +13,15 @@ defineProps({
     toAutocomplete: {
         type: Array,
         default() {
-            return []
-        }
+            return [];
+        },
     },
     fromAutocomplete: {
         type: Array,
         default() {
-            return []
-        }
-    }
+            return [];
+        },
+    },
 });
 
 const emit = defineEmits(['search-from', 'search-to', 'search']);
