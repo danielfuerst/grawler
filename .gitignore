@@ -1,1 +1,17 @@
 .idea/
+routing-database/data/2_import_ways.sql
+routing-database/data/clipped_and_filtered.dbf
+routing-database/data/clipped_and_filtered.prj
+routing-database/data/clipped_and_filtered.shp
+routing-database/data/clipped_and_filtered.shx
+routing-database/data/filtered.dbf
+routing-database/data/filtered.prj
+routing-database/data/filtered.shp
+routing-database/data/filtered.shx
+routing-database/data/reprojected.dbf
+routing-database/data/reprojected.prj
+routing-database/data/reprojected.shp
+routing-database/data/reprojected.shx
+swisstlm3d_2021-04_2056_5728.shp.zip
+routing-database/data/2021_SWISSTLM3D_SHP_CHLV95_LN02
+tile-generator/out

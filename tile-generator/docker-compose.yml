@@ -1,0 +1,11 @@
+version: "3"
+services:
+  t-rex:
+    image: sourcepole/t-rex
+    volumes:
+      - ./out:/var/data/out
+      - .:/var/data/in:ro
+    user: root
+    environment: 
+      - RUST_BACKTRACE=1
+    command: generate --config=config.toml --progress true --loglevel info

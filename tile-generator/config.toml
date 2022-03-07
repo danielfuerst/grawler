@@ -1,0 +1,30 @@
+[service.mvt]
+viewer = false
+
+[[datasource]]
+name = "wegnetz"
+dbconn = "postgres://postgres:postgres@docker.for.mac.localhost:5432/postgres"
+
+[grid]
+predefined = "web_mercator"
+
+[[tileset]]
+name = "wegnetz"
+attribution = "© Swisstopo"
+
+
+[[tileset.layer]]
+name = "wegnetz-layer"
+datasource = "wegnetz"
+
+# Select all attributes of table:
+table_name = "wege"
+geometry_field = "geom"
+geometry_type = "MULTILINESTRING"
+
+[[webserver.static]]
+dir = "./public/"
+path = "/static"
+
+[cache.file]
+base = "/var/data/out"
